@@ -1,0 +1,122 @@
+* {
+	box-sizing: border-box;
+}
+header {
+	display: flex;
+	justify-content:center;
+	background: #3498db;
+}
+.headerWrapper {
+	background: #3498db;
+	width:100%;
+	height:68px;
+	display: flex;
+	align-items:center;
+	justify-content:space-between;
+	max-width: 1170px;
+	position: relative;
+	.burgerMenu {
+		width:25px;
+		height:20px;
+		border-top:3px solid #ffffff;
+		border-bottom:3px solid #ffffff;
+		.dropDownPunktBur {
+			position:relative;
+			height: 20px;
+		}
+		.dropDownBur {
+			position: absolute;
+			display: none;
+			z-index: 999;
+			left: 0px;
+			top:25px;
+			li {
+				display: block;
+				padding: 15px 65px;
+				border:1px solid #3498db; 
+				background: #f5f6f8;
+				color:#3498db;
+			}
+		}
+		.dropDownPunktBur:hover .dropDownBur {
+			display: block;
+		}
+	}
+	.burgerMenu:before {
+		content: '';
+		background: white;
+		position: absolute;
+		padding: 1.5px 10px;
+    top: 32px;
+	}
+	.profile {
+		display: flex;
+		align-items:center;
+		i {
+			color:white;
+			font-size: 22px;
+			padding-right: 15px;
+		}
+		.profileImg {
+			height: 40px;
+			width: 40px;
+			img {
+				border-radius: 50%;
+			}
+		}
+		.userName {
+			p {
+				font-family: 'latobold';
+				font-size: 15px;
+				color:white;
+				margin-left: 20px;
+				margin-top: 4px;
+			}
+			p:last-child {
+				font-family: 'latoregular';
+				font-size: 12px;
+				color:#297ab0;
+				margin-left: 20px;
+				margin-top: 4px;
+			}
+			.avai {
+				display: flex;
+				align-items:center;
+				justify-content: space-between;
+				
+				.firstText {
+					font-family: 'latoregular';
+					font-size: 12px;
+					color:#297ab0;
+					margin-left: 20px;
+					margin-top: 4px;
+				}
+				i {
+					color:#297ab0;
+					font-size: 12px;
+					padding-top: 7px;
+				}
+				.dropDownPunkt {
+					position:relative;
+				}
+				.dropDown {
+					position: absolute;
+					display: none;
+					z-index: 999;
+					right: 0px;
+					top:25px;
+					li {
+						display: block;
+						padding: 15px 65px;
+						border:1px solid #3498db; 
+						background: #f5f6f8;
+						color:#3498db;
+					}
+				}
+				.dropDownPunkt:hover .dropDown {
+					display: block;
+				}
+			}
+		}
+	}
+}
